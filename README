@@ -1,0 +1,7 @@
+Django User Activity
+====================
+
+This is another reusable app to register in a simpler way the user activities on a site. 
+After, you can generate activities's reports at range of date by one or many users.
+
+  
