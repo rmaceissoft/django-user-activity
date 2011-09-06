@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -15,7 +17,7 @@ class ActivityType(models.Model):
 class Activity(models.Model):
     user = models.ForeignKey(User)
     activity_type = models.ForeignKey(ActivityType)
-    timestamp = models.DateTimeField(auto_now_add=True)
+    timestamp = models.DateTimeField(default=datetime.now, editable=False, blank=True)
     hits = models.PositiveSmallIntegerField(default=1) #used when
     
     class Meta:
